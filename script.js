@@ -17,62 +17,85 @@ function openContent(){
 }
 
 hamburger.addEventListener("click", openContent);
-close.addEventListener("click", openContent)
+close.addEventListener("click", openContent);
 
-// asiignment solution 1
-  let arr = [2,3,4,5];
-function sumOfNumbers(arrayOfNumbers) {
-    let sum = 0;
-    for(let i = 0; i < arrayOfNumbers.length; i++){
-    //   sum += arrayOfNumbers[i];
-        console.log(sum += arrayOfNumber)
-    }
-      return arrayOfNumbers.length;
-  }
-
-// sumOfNumbers(arr);
-
-// // assignment solution 2
-// function countEvenNumbers(arrayOfNumbers) {
-    
-//     for(let i = 0; i < arrayOfNumbers.length; i++){
-//         let even = arrayOfNumbers[i] % 2 === 0;
-//         let total = arrayOfNumbers[i];
-//         if(even == true){
-//             console.log(`"even" ${total}`)
-//         }else{
-//             console.log("eee")
-//         }
-        
-//     }
-//     return arrayOfNumbers.length;
-// }
-
-// countEvenNumbers(arr);
-
-function celsiusToFahrenheit(arrayOfNumbers) {
-    let ToFahrenheit = [];
-    
-    for(let i = 0; i < arrayOfNumbers.length; i++){
-        let formula = Math.floor((arrayOfNumbers[i] * 1.8) + 32);
-        ToFahrenheit.push(formula);
-        console.log(ToFahrenheit);
-    }
-    return arrayOfNumbers;
-}
-
-celsiusToFahrenheit(arr);
-
-
+// testimonial call nav
 let testimonial = document.querySelectorAll(".testimonial aside");
 let testimonialBox = document.querySelector(".testimonial");
+let testimonialNav = document.querySelectorAll(".testimonialNav small")
 
-let counter = 1;
-let size = testimonial[0].clientWidth;
-console.log(size);
+// console.log(testimonialNav);
+function changeTestimony(){
+        testimonial[0].style.visibility = "visible";
+        testimonial[1].style.visibility = "hidden";
+        testimonial[2].style.visibility = "hidden";
+        testimonial[3].style.visibility = "hidden";
+        testimonialNav[0].style.backgroundColor = "var(--Bright-Red)";
+        testimonialNav[1].style.backgroundColor = "transparent";
+        testimonialNav[2].style.backgroundColor = "transparent";
+        testimonialNav[3].style.backgroundColor = "transparent";
+}
+function changeTestimony1(){
+    testimonial[0].style.visibility = "hidden";
+        testimonial[1].style.visibility = "visible";
+        testimonial[2].style.visibility = "hidden";
+        testimonial[3].style.visibility = "hidden";
+        testimonialNav[1].style.backgroundColor = "var(--Bright-Red)";
+        testimonialNav[0].style.backgroundColor = "transparent";
+        testimonialNav[2].style.backgroundColor = "transparent";
+        testimonialNav[3].style.backgroundColor = "transparent";
+}
+function changeTestimony2(){
+        testimonial[0].style.visibility = "hidden";
+        testimonial[1].style.visibility = "hidden";
+        testimonial[2].style.visibility = "visible";
+        testimonial[3].style.visibility = "hidden";
+        testimonialNav[2].style.backgroundColor = "var(--Bright-Red)";
+        testimonialNav[0].style.backgroundColor = "transparent";
+        testimonialNav[1].style.backgroundColor = "transparent";
+        testimonialNav[3].style.backgroundColor = "transparent";
+}
+function changeTestimony3(){
+    testimonial[0].style.visibility = "hidden";
+    testimonial[1].style.visibility = "hidden";
+    testimonial[2].style.visibility = "hidden";
+    testimonial[3].style.visibility = "visible";
+    testimonialNav[3].style.backgroundColor = "var(--Bright-Red)";
+    testimonialNav[0].style.backgroundColor = "transparent";
+    testimonialNav[1].style.backgroundColor = "transparent";
+    testimonialNav[2].style.backgroundColor = "transparent";
+}
 
-testimonialBox.style.transform = "translateX(`${-size} * ${counter}px`)"
-console.log(`${-size} * ${counter}px`)
+testimonialNav[0].addEventListener("click",changeTestimony);
+testimonialNav[1].addEventListener("click",changeTestimony1);
+testimonialNav[2].addEventListener("click",changeTestimony2);
+testimonialNav[3].addEventListener("click",changeTestimony3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let counter = 1;
+// let size = testimonial[0].clientWidth;
+// console.log(size);
+
+// testimonialBox.style.transform = "translateX(`${-size} * ${counter}px`)"
+// console.log(`${-size} * ${counter}px`)
 
 // Mouse hover addEventListener
-testimonialBox.addEventListener("mouseleft", () => {})
+// testimonialBox.addEventListener("mouseleft", () => {})
